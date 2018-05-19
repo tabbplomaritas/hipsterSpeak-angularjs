@@ -1,0 +1,1 @@
+# hipsterSpeak-angularjs
