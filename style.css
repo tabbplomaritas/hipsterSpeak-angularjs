@@ -1,0 +1,143 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  background: #fc4a1a;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+
+}
+
+h1, h2{
+  font-family: 'Inconsolata', monospace;
+  color: #fc4a1a;
+  font-size: 4rem;
+  margin: 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+
+
+main {
+  position: relative;
+  padding-bottom: 1rem;
+  margin: 2rem auto;
+  background-color: rgba(255, 255, 255, 0.842);
+  width: 90%;
+  height: auto;
+  min-height: 60rem;;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  Box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+.buttons-container {
+  width: 100%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+button {
+  height: 5rem;
+  padding: 1rem;
+  width: 80%;
+  max-width: 30rem;
+  border-radius: 1rem;
+  margin: .5rem;
+  color: white;
+  font-size: 2rem;
+  Box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.55);
+}
+
+button:focus{
+  outline:none;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: 
+}
+
+button:nth-of-type(4){
+  background-color: #fc4a1a;
+}
+button:nth-of-type(3){
+  background-color: #fc741a;
+}
+button:nth-of-type(2){
+  background-color: #f7a233;
+}
+button:nth-of-type(1){
+  background-color: #f7b733;
+}
+
+
+
+
+.words-phrases{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  padding: .3rem;
+  font-size: 1.5rem;
+  width: 95%;
+  height: auto;
+  min-height: 15rem;
+  box-sizing: border-box;
+  /* background-color: deeppink;
+  border: 2px solid pink; */
+  color: #585755;
+  border-radius: 1rem;
+}
+
+.word{
+  margin: .2rem 0;
+  padding: .4rem;
+  /* margin: .5rem; */
+}
+
+.style {
+ font-family: monospace;
+ font-size: 2.4rem;
+ font-weight: bold;
+ color: #fc4a1a;
+ text-shadow: 1px 1px 1px #f7b733;
+ text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px){
+  .buttons-container{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  button{
+    width: 18rem;
+  }
+  .words-phrases{
+    min-height: 0;
+  }
+
+  #reset{
+    position: absolute;
+    bottom: 1rem;
+  }
+}

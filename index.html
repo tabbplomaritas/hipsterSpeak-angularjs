@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hipsterWordsModule">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat" rel="stylesheet">
+  <title>Hipster Words</title>
+</head>
+<body>
+  <main ng-controller="HipsterWords as hip">
+      <h1>Hipster Speak with AngularJS</h1>
+      <h2>The game you probable haven't heard of...</h2>
+    <section class="buttons-container">
+      <button type="button" ng-click="hip.addWord()">+ Word</button>
+      <button type="button" ng-click="hip.addWordStyled()">+ Styled Word</button>
+      <button type="button" ng-click="hip.addPhrase()">+ Phrase</button>
+      <button type="button" ng-click="hip.addPhraseStyled()">+ Styled Phrase</button>
+    </section>
+    <section class="words-phrases">
+      <p class="word" ng-class="{'style':item.styled === true}"ng-repeat="item in hip.print track by $index">{{item.printedEl}}</p>
+    
+    </section>
+    <button id="reset" type="button" ng-click="hip.reset()">Reset</button>
+  </main>
+
+  <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
+  <script src="module.js"></script>
+  <script src="controller.js"></script>  
+</body>
+</html>
